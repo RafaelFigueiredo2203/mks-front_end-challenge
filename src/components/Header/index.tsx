@@ -1,5 +1,4 @@
 import {
-  Button,
   Drawer,
   DrawerBody,
   DrawerCloseButton,
@@ -7,11 +6,11 @@ import {
   DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
-  Input,
-  useDisclosure,
+  useDisclosure
 } from '@chakra-ui/react';
 import { ShoppingCart } from "phosphor-react";
-import { ButtonCart, HeaderContainer } from "./styles";
+import { ResumeProduct } from './components/ResumeProduct';
+import { ButtonCart, FinalyBuyButton, HeaderContainer, Span } from "./styles";
 
 export function Header(){
 
@@ -31,25 +30,31 @@ export function Header(){
       </ButtonCart>
 
       <Drawer
+        
         isOpen={isOpen}
         placement='right'
         onClose={onClose}
        
       >
-        <DrawerOverlay />
-        <DrawerContent>
-          <DrawerCloseButton />
-          <DrawerHeader>Create your account</DrawerHeader>
+        <DrawerOverlay  />
+        <DrawerContent  backgroundColor="#0F52BA">
+          <DrawerCloseButton
+          marginTop={5} 
+          rounded={100} 
+          color="#fff" 
+          backgroundColor="#000"/>
+          <DrawerHeader><Span>Carrinho de compras</Span></DrawerHeader>
 
-          <DrawerBody>
-            <Input placeholder='Type here...' />
+          <DrawerBody padding={2}   backgroundColor="#0F52BA">
+            <ResumeProduct/>
+            <ResumeProduct/>
+            <ResumeProduct/>
           </DrawerBody>
 
-          <DrawerFooter>
-            <Button variant='outline' mr={3} onClick={onClose}>
-              Cancel
-            </Button>
-            <Button colorScheme='blue'>Save</Button>
+          <DrawerFooter  backgroundColor="#000">
+            <FinalyBuyButton>
+              <span>Finalizar Compra</span>
+            </FinalyBuyButton>
           </DrawerFooter>
         </DrawerContent>
       </Drawer>

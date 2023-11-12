@@ -15,6 +15,7 @@ div{
   justify-content: center;
 
   img{
+    
     margin-top: 14px;
     margin-bottom: 18px;
   }

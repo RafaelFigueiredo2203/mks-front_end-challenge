@@ -50,3 +50,34 @@ export const ButtonCart = styled.button`
 
 `;
 
+export const FinalyBuyButton = styled.button`
+width: 100%;
+height: 50px;
+background: #000;
+border-radius: 8px;
+span{
+color: #FFF;
+
+font-family: Montserrat;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: 15px; /* 53.571% */
+}
+
+&:hover{
+    background-color: #111827;
+    transition: 0.2s;
+  }
+`;
+
+export const Span = styled.span`
+color: #FFF;
+
+font-family: Montserrat;
+font-size: 27px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+`;
+
