@@ -27,6 +27,9 @@ div{
     font-weight: 300;
   }
 }
+@media (max-width: 473px) {
+ padding:28px 20px 28px;
+}
 `
 export const ButtonCart = styled.button`
   width:90px;
@@ -48,6 +51,24 @@ export const ButtonCart = styled.button`
     transition: 0.2s;
   }
 
+`;
+export const TotalDiv = styled.div`
+width:100%;
+height:50px;
+background-color: ${props => props.theme.blue};
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+span{
+color: #FFF;
+
+font-family: Montserrat;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: 15px; /* 53.571% */
+}
 `;
 
 export const FinalyBuyButton = styled.button`

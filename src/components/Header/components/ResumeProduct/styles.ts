@@ -24,7 +24,7 @@ export const TitleProduct = styled.div`
 width: 95px;
 height: 33px;
 margin-left:10px;
-margin-bottom: 15px;
+margin-bottom: 30px;
 
 span{
 color: #2C2C2C;
@@ -100,4 +100,19 @@ font-size: 14px;
 font-style: normal;
 font-weight: 700;
 line-height: 17px; /* 121.429% */
+`;
+
+export const RemoveProductButton = styled.button`
+position: absolute;
+width: 18px;
+height: 18px;
+background-color:#000;
+border-radius:100%;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+
+margin-bottom:85px;
+margin-left: 285px
 `;

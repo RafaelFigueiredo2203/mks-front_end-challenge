@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ProductCardContainer = styled.div`
 width: 218px;
-height: 285px;
+
 background-color:#fff;
 justify-self: center;
 
@@ -15,7 +15,8 @@ div{
   justify-content: center;
 
   img{
-    
+    width: 217.562px;
+    height: 180px;
     margin-top: 14px;
     margin-bottom: 18px;
   }
@@ -23,13 +24,16 @@ div{
 `;
 
 export const TitleProduct = styled.div`
-width: 124px;
+max-width: 200px;
 height: 38px;
 margin-left: 14px;
 
-span{
-color: #2C2C2C;
 
+
+
+h1{
+  text-align: left;
+color: #2C2C2C;
 font-family: Montserrat;
 font-size: 16px;
 font-style: normal;
@@ -38,13 +42,32 @@ line-height: 19px; /* 118.75% */
 }
 `;
 
+export const PriceDiv = styled.div`
+  margin-left: 10px;
+  padding: 5px;
+  height: 26px;
+  background-color: #373737;
+  border-radius:8px;
+  
+  span{
+  color: #FFF;
+  
+  font-family: Montserrat;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 15px; /* 100% */
+  }
+  
+`;
+
 export const SubtitleProduct = styled.div`
 
 width: 192px;
-height: 25px;
+height: 80px;
 flex-shrink: 0;
 margin-left: 14px;
-margin-top: 8px;
+margin-top: 10px;
 
 span{
 color: #2C2C2C;
@@ -58,6 +81,7 @@ line-height: 12px; /* 120% */
 `;
 
 export const BuyButton = styled.button`
+bottom:0;
 width: 100%;
 height: 31.907px;
 margin-top:12px;
