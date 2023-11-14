@@ -16,18 +16,14 @@ Desafio MKS Sistemas
 
   </h1>
 
- Acesse :  https://getmechpwa-kirejs1pf-rafaelfigueiredo2203.vercel.app/
-
-
-
-
 ## ✨ Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - [React](https://reactjs.org)
-- [SASS](https://sass-lang.com/)
-- [Firebase](https://firebase.google.com/docs)
+- [Vite](https://vitejs.dev/)
+- [Styled-Components](https://styled-components.com/)
+- [Typescript](https://www.typescriptlang.org/)
 
 
 ## 💻 Projeto
@@ -36,7 +32,7 @@ Este projeto foi um desafio para um processo seletivo na MKS Sistemas
 
 ## 💻💅🏻 Figma do Projeto
 
-- [Figma GetMech](https://www.figma.com/file/yZXCE42Oiew3FR9KmqF6mk/getMech-Origin?node-id=0%3A1)
+- [Figma](https://www.figma.com/file/jPZeU9a0xDMd8BX3DQhqCr/MKS-Front-end-challenge-(Copy)?node-id=5%3A207&mode=dev)
 
 ## 🚀 Como executar
 
