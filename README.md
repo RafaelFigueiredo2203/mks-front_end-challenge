@@ -7,7 +7,7 @@ Desafio MKS Sistemas
 
 <br>
 
-<h1 align="center" >
+<h1 align="center">
     
   ![image](https://github.com/RafaelFigueiredo2203/mks-front_end-challenge/assets/60237326/8acd5299-d0c3-40e7-b99d-9efe4d7509e5)
 
