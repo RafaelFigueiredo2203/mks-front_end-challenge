@@ -1,27 +1,46 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h1 align="center" >
+Desafio MKS Sistemas 
+</h1>
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+<br>
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+<h1 align="center" >
+  ![image](https://github.com/RafaelFigueiredo2203/mks-front_end-challenge/assets/60237326/431e10df-5b46-45a2-ae51-875a1d065741)
+   ![image](https://github.com/RafaelFigueiredo2203/mks-front_end-challenge/assets/60237326/6f25db18-a09c-4838-afd8-64e6742e6956)
 
-- Configure the top-level `parserOptions` property like this:
+  </h1>
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+ Acesse :  https://getmechpwa-kirejs1pf-rafaelfigueiredo2203.vercel.app/
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+
+
+## ✨ Tecnologias
+
+Esse projeto foi desenvolvido com as seguintes tecnologias:
+
+- [React](https://reactjs.org)
+- [SASS](https://sass-lang.com/)
+- [Firebase](https://firebase.google.com/docs)
+
+
+## 💻 Projeto
+
+Este projeto foi um desafio para um processo seletivo na MKS Sistemas 
+
+## 💻💅🏻 Figma do Projeto
+
+- [Figma GetMech](https://www.figma.com/file/yZXCE42Oiew3FR9KmqF6mk/getMech-Origin?node-id=0%3A1)
+
+## 🚀 Como executar
+
+- Clone o repositório
+- Instale as dependências com `yarn` ou `npm install`
+- Inicie o servidor com `yarn start` ou `npm start`
+
+Agora você pode acessar [`localhost:3000`](http://localhost:3000) do seu navegador.
+
+Never Stop Learning.🚀 🚀 🚀 
