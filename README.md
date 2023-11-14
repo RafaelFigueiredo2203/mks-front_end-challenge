@@ -9,10 +9,12 @@ Desafio MKS Sistemas
 
 <h1 align="center">
     
-  ![image](https://github.com/RafaelFigueiredo2203/mks-front_end-challenge/assets/60237326/8acd5299-d0c3-40e7-b99d-9efe4d7509e5)
+  ![image](https://github.com/RafaelFigueiredo2203/mks-front_end-challenge/assets/60237326/2979c9a2-36fd-499c-a511-4b46dcf13733)
+
 
   
-   ![image](https://github.com/RafaelFigueiredo2203/mks-front_end-challenge/assets/60237326/6f25db18-a09c-4838-afd8-64e6742e6956)
+  ![image](https://github.com/RafaelFigueiredo2203/mks-front_end-challenge/assets/60237326/6317bad7-d2d1-4551-bd93-1f756b495f24)
+
 
   </h1>
 
