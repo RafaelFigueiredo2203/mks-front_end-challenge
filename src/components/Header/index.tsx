@@ -9,38 +9,20 @@ import {
   useDisclosure
 } from '@chakra-ui/react';
 import { ShoppingCart } from "phosphor-react";
-import { useEffect, useState } from 'react';
-import { ProductsBuyProps } from '../ProductsArea';
+import { useState } from 'react';
+import { toast } from "react-toastify";
+
+
+import { useCart } from "../../context/utils/useCart";
 import { ResumeProduct } from './components/ResumeProduct';
 import { ButtonCart, FinalyBuyButton, HeaderContainer, Span, TotalDiv } from "./styles";
 
 export function Header(){
 
-  const [productsBuy, setProductsBuy] = useState<ProductsBuyProps[]>([])
+  const { productsBuy, setProductsBuy } = useCart();
   const [stateQtd,setStateQtd] = useState(2);
-
-
-  useEffect(() => {
-    
-    const taskStorage = localStorage.getItem('productsInCart');
-
-    if(taskStorage){
-      setProductsBuy(JSON.parse(taskStorage));
-    }
-    
-    
-  },[productsBuy, ]);
-
-  
-
-
   const { isOpen, onOpen, onClose } = useDisclosure()
-
-  //const produto = [{preco: 1}, {preco: 2}];
-  
-    
-  
-  
+  const notify = () => toast.success("Compra efetuada com sucesso!");
 
  
    function handleIncreaseQuantity(id:number){
@@ -76,18 +58,23 @@ export function Header(){
   }
 
   function handleProductRemove(id: number) {
-
     const filterProducts = productsBuy.filter(product => product.id !== id);
-    localStorage.removeItem('productsInCart');
-    setProductsBuy(filterProducts);
 
+    setProductsBuy(filterProducts);
+  
+    localStorage.setItem('productsInCart', JSON.stringify(filterProducts));
   }
 
-  
+  function handleFinallyBuy(){
+    notify()
+    setTimeout(function() {
+      window.location.reload();
+    }, 2000);
+  }
     
-    const filteredPrice = productsBuy.map((prod) => prod.price).reduce((total, price) =>{
-      return total + price},0);
-  
+  const total = productsBuy.map((product) => product.price).reduce((total, price) =>{
+  return total + price},0);
+ 
 
   return(
     <HeaderContainer>
@@ -109,6 +96,7 @@ export function Header(){
        
       >
         <DrawerOverlay  />
+
         <DrawerContent  backgroundColor="#0F52BA">
           <DrawerCloseButton
           marginTop={5} 
@@ -139,12 +127,20 @@ export function Header(){
           
             <TotalDiv>
               <span>Total</span>  
-               <span>R${filteredPrice}</span>         
+               <span>R${total}</span>         
             </TotalDiv>
           
-            <FinalyBuyButton>
-              <span>Finalizar Compra</span>
-            </FinalyBuyButton>
+          {
+            productsBuy.length <= 0 ?
+            <FinalyBuyButton disabled >
+            <span>Finalizar Compra</span>
+          </FinalyBuyButton>
+          :
+          <FinalyBuyButton  onClick={handleFinallyBuy}>
+          <span>Finalizar Compra</span>
+          </FinalyBuyButton>
+          
+          }
           </DrawerFooter>
         </DrawerContent>
       </Drawer>

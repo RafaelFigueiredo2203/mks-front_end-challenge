@@ -4,7 +4,7 @@ import { PriceProduct, QtdContainer, QtdControllerButton, QtdSpan, RemoveProduct
 interface ResumeProductProps{
   photo:string;
   name: string;
-  price:string;
+  price:number;
   amount:number;
   onIncreaseQuantity: () => void;
   onDecreaseQuantity: () => void;

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ResumeProductContainer = styled.div`
-width: 300px;
+width: 298px;
 height: 95px;
 border-radius: 8px;
 background: #FFF;
@@ -14,10 +14,12 @@ margin-bottom: 20px;
 box-shadow: -2px 2px 10px 0px rgba(0, 0, 0, 0.05);
 
 img{
-margin-left: -10px;
-width: 40px;
+margin-left: 10px;
+width: 50px;
 height: 51px;
 }
+
+
 `;
 
 export const TitleProduct = styled.div`
@@ -80,7 +82,7 @@ cursor: pointer;
 
 export const QtdSpan = styled.p`
 
-position: absolute;
+position: relative;
 margin-top: -30px;
 margin-left: -5px;
 color: #000;
@@ -103,7 +105,7 @@ line-height: 17px; /* 121.429% */
 `;
 
 export const RemoveProductButton = styled.button`
-position: absolute;
+position:relative;
 width: 18px;
 height: 18px;
 background-color:#000;
@@ -114,5 +116,5 @@ justify-content: center;
 cursor: pointer;
 
 margin-bottom:85px;
-margin-left: 285px
+margin-left: 10px
 `;

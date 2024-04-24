@@ -1,26 +1,17 @@
 import { Skeleton } from "@chakra-ui/react";
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useQuery } from "react-query";
+import { toast } from "react-toastify";
+import { useCart } from "../../context/utils/useCart";
 import { ProductCard } from "./components/ProductCard";
 import { ProductArea, ProductGridContainer } from "./styles";
 
-export interface ProductsBuyProps{
-  id:number;
-  photo:string;
-  name:string;
-  description:string;
-  price:string;
-  amount:number;
-  newPrice:number;
-}
 
 
 export function ProductsArea(){
-  
-   const [productsBuy, setProductsBuy] = useState<ProductsBuyProps[]>([])
-
-  
+  const { productsBuy, setProductsBuy } = useCart();
+  const notify = () => toast.success("Adicionado ao carrinho!", {position:'top-center'});
 
    useEffect(() => {
     localStorage.setItem('productsInCart', JSON.stringify(productsBuy));
@@ -51,18 +42,33 @@ if (error) return 'An error has occurred: ' +  console.log(error)
 
   function BuyProduct(id:number){
     
-    const newProductBuy = data.products.find(x => x.id === id )
-    if (newProductBuy) {
-      newProductBuy.amount = 2,
+  // Encontrar o produto no conjunto de dados
+  const newProductBuy = data.products.find((x: { id: number }) => x.id === id);
+
+  if (newProductBuy) {
+    // Verificar se o produto já está no carrinho
+    const existingProductIndex = productsBuy.findIndex(product => product.id === id);
+
+    if (existingProductIndex !== -1) {
+      // Se o produto já estiver no carrinho, atualizar a quantidade
+      const updatedProducts = [...productsBuy];
+      updatedProducts[existingProductIndex].amount += 2; // Incrementar a quantidade
+      setProductsBuy(updatedProducts);
+    } else {
+      // Se o produto não estiver no carrinho, adicionar ao carrinho
+       newProductBuy.amount = 2;
       newProductBuy.price = parseInt(newProductBuy.price);
       newProductBuy.newPrice = newProductBuy.price;
-      
+
+      setProductsBuy(prevState => [...prevState, newProductBuy]);
     }
-    setProductsBuy(prevState => [...prevState,newProductBuy])
-  
+
+    // Atualizar o local storage com o novo estado do carrinho
+    localStorage.setItem('productsInCart', JSON.stringify(productsBuy));
+    notify();
    }
 
-  
+  }
 
   return (
     <ProductArea>
