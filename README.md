@@ -31,6 +31,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 ## 💻 Projeto
 
 Este projeto foi um desafio para um processo seletivo na MKS Sistemas 
+Acesse : https://mks-front-end-challenge-xi.vercel.app/
 
 ## 💻💅🏻 Figma do Projeto
 
